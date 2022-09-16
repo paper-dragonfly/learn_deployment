@@ -25,10 +25,10 @@ def simple_fn():
 
 @app.route('/books')
 def db():
-    page = request.args['page']
+    # page = request.args['page']
     conn, cur = db_connect()
-    cur.execute("SELECT * FROM books WHERE page=%s", (f'{page}',))
+    cur.execute("SELECT * FROM books")
     book_info = cur.fetchall()
     cur.close()
     conn.close()
-    return json.dumps({'body':book_info})
+    return book_info
