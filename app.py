@@ -14,7 +14,7 @@ def db_connect(autocommit:bool = False):
         host="postgres://ergtrack_user:Np4qF4P1vCFWwNDrdF2Qp3xOwtmD7s4Y@dpg-cchp06irrk0c3kinmukg-a/ergtrack",
         database="ergtrack",
         user='ergtrack_user',
-        password='fallingbird')
+        password='Np4qF4P1vCFWwNDrdF2Qp3xOwtmD7s4Y')
     cur = conn.cursor()
     conn.autocommit = autocommit
     return conn, cur
