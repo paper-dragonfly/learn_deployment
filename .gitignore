@@ -3,5 +3,5 @@
 .venvldf/*
 dash/.venvldd/*
 flask/.venvldf/* 
-flask/.env/*
-.env/*
+flask/.env
+
