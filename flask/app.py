@@ -8,7 +8,7 @@ app = Flask(__name__)
 # connect to database
 def db_connect(autocommit:bool = False):
     # params = config(db)
-    conn = psycopg2.connect('postgres://ergtrack_user:Np4qF4P1vCFWwNDrdF2Qp3xOwtmD7s4Y@dpg-cchp06irrk0c3kinmukg-a.ohio-postgres.render.com/ergtrack')
+    conn = psycopg2.connect('postgres://ergtrack_user:Np4qF4P1vCFWwNDrdF2Qp3xOwtmD7s4Y@dpg-cchp06irrk0c3kinmukg-a/ergtrack')
     cur = conn.cursor()
     conn.autocommit = autocommit
     return conn, cur
@@ -28,5 +28,5 @@ def db():
     conn.close()
     return json.dumps({'status_code':200, 'body':book_info}, default=str) 
 
-if __name__ == '__main__':
-    app.run(host='localhost', port=5010, debug=True)
+# if __name__ == '__main__':
+#     app.run(host='localhost', port=5010, debug=True)
