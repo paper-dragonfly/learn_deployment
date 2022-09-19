@@ -4,4 +4,6 @@
 dash/.venvldd/*
 flask/.venvldf/* 
 flask/.env
+.env
+*.cpython
 
