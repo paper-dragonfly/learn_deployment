@@ -5,7 +5,15 @@ import json
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-load_dotenv('../.env')
+
+def load_env_vars():
+    r = load_dotenv(verbose=True)
+    if not r:
+        raise Exception('No environmental variables found')
+    else:
+        print('env vars found')
+    
+load_env_vars()
 
 def get_connection_str():
     env = os.getenv('ENVIRONMENT')   
