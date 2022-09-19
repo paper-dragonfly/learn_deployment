@@ -20,7 +20,10 @@ app.layout = dbc.Container([
 def show_bookinfo(n_clicks):
     if n_clicks == 0:
         raise PreventUpdate
-    resp_dict = requests.get("http://localhost:5010/books").json()
+    if n_clicks%2 == 1:
+        resp_dict = requests.get("https://learn-deploy-flaskapp.onrender.com/books").json()
+    else: 
+        resp_dict = {'body': 'HIDDEN'}
     return str(resp_dict['body'])
 
 if __name__ == '__main__':
