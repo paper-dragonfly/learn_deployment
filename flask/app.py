@@ -5,7 +5,7 @@ import json
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-load_dotenv()
+load_dotenv('../.env')
 
 def get_connection_str():
     env = os.getenv('ENVIRONMENT')   
