@@ -1,11 +1,11 @@
 import os 
 import psycopg2
 
-conn = psycopg2.connect(
-        host="postgres://ergtrack_user:Np4qF4P1vCFWwNDrdF2Qp3xOwtmD7s4Y@dpg-cchp06irrk0c3kinmukg-a/ergtrack",
-        database="ergtrack",
-        user=os.environ['DB_USERNAME'],
-        password=os.environ['DB_PASSWORD'])
+conn = psycopg2.connect('postgres://ergtrack_user:Np4qF4P1vCFWwNDrdF2Qp3xOwtmD7s4Y@dpg-cchp06irrk0c3kinmukg-a.ohio-postgres.render.com/ergtrack')
+        # host="dpg-cchp06irrk0c3kinmukg-a",
+        # database="ergtrack",
+        # user='ergtrack_user',
+        # password='Np4qF4P1vCFWwNDrdF2Qp3xOwtmD7s4Y')
 
 # Open a cursor to perform database operations
 cur = conn.cursor()
