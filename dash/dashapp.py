@@ -5,6 +5,7 @@ from dash.exceptions import PreventUpdate
 import requests
 
 app = Dash(__name__,external_stylesheets=[dbc.themes.SANDSTONE], use_pages=False)
+server = app.server
 
 app.layout = dbc.Container([
     dcc.Markdown('# Books!'),
@@ -26,5 +27,5 @@ def show_bookinfo(n_clicks):
         resp_dict = {'body': 'HIDDEN'}
     return str(resp_dict['body'])
 
-# if __name__ == '__main__':
-#     app.run('localhost', 5011, debug=True )
+if __name__ == '__main__':
+    app.run('localhost', 5011, debug=True )
