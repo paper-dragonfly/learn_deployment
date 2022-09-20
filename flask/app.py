@@ -16,11 +16,11 @@ def load_env_vars():
 load_env_vars()
 
 def get_connection_str():
-    env = os.getenv('ENVIRONMENT')   
+    env = os.getenv('ENVIRONMENT')  
     if env == 'production':
         conn_str = os.getenv('INTERNAL_CONNECTION_STR') 
     elif env == 'dev':
-        conn_str = os.getenv('EXTERNAL_CONNECTION_STR') 
+        conn_str = os.getenv('EXTERNAL_CONNECTION_STR')
     return conn_str 
 
 CONN_STR = get_connection_str()
@@ -46,5 +46,7 @@ def db():
     conn.close()
     return json.dumps({'status_code':200, 'body':book_info}, default=str) 
 
+
+## For dev mode
 # if __name__ == '__main__':
 #     app.run(host='localhost', port=5010, debug=True)

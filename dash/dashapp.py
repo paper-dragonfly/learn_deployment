@@ -26,5 +26,5 @@ def show_bookinfo(n_clicks):
         resp_dict = {'body': 'HIDDEN'}
     return str(resp_dict['body'])
 
-if __name__ == '__main__':
-    app.run('localhost', 5011, debug=True )
+# if __name__ == '__main__':
+#     app.run('localhost', 5011, debug=True )
